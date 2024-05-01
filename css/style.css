@@ -1,0 +1,567 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*  */
+/*
+  #############################
+  ====== global rules =========
+  ############################# 
+ */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font: 16px;
+}
+body{
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+a{
+  color: #1F242D;
+  text-decoration: none;
+}
+a:hover{
+  color: #BA2E45;
+}
+li{
+  list-style: none;
+}
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.container{
+  margin-inline: auto;
+  padding-inline: 15px;
+  max-width: 100%;
+}
+img{
+  max-width: 100%;
+}
+.btn{
+  background-color: #8eadd5;
+  display: inline-block;
+  padding: 8px 20px;
+  color: #fff;
+  border-radius: 8px;
+  transition: 500ms all ease;
+  text-transform: uppercase;
+}
+.btn:hover{
+  background-color: #BA2E45;
+  color: #fff;
+}
+.head{
+  margin-block-end: 25px;
+  color: #272d38;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#pages{
+  overflow: hidden;
+}
+/*
+  #######################
+  ====== HEADER =========
+  ####################### 
+ */
+ .header{
+  padding-block-start: 45px;
+  position: relative;
+ }
+ .header::after{
+  content: '';
+  position: absolute;
+  background: rgb(142, 173, 213, 24%);
+  width: 449px;
+  height: 449px;
+  border-radius: 50%;
+  left: -201px;
+  top: -207px;
+  filter: blur(100px);
+  pointer-events: none;
+ }
+
+ .logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+ .logo h1{
+  font-size: 1rem;
+  font-weight: bold;
+ }
+ .btn-navbar{
+  font-size: 1.4rem;
+ }
+ .navbar{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  max-width: 350px;
+  top: 0;
+  right: 0;
+  padding-block-start: 40px;
+  padding-inline: 20px;
+  background: #238C6E;
+  transform: translateX(100%);
+  transition: 500ms ease-in-out;
+  z-index: 5;
+ }
+ .navbar.active{
+  transform: translateX(0%);
+ }
+ .navbar .logo{
+  margin-block-end: 20px;
+ }
+ .menu-link{
+  display: block;
+  margin-block-end: 15px;
+  color: #fff;
+  transition: 400ms ease-in;
+ }
+ .menu-link:hover{
+  color: #1f242d;
+  padding-inline-start: 5px;
+ }
+ .overlay{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition: 400ms ease-in-out;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+ }
+ .overlay.active{
+  visibility: visible;
+  opacity: 0.4;
+ }
+ /*
+  #####################
+  ====== hero =========
+  #####################
+ */
+.hero{
+  padding-block-start: 70px;
+}
+.hero .content{
+  margin-block-end: 30px;
+}
+.hero .content h2{
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #272d38;
+  margin-block-end: 10px;
+}
+.hero .content p{
+  margin-block-end: 10px;
+  font-size: 0.9rem;
+}
+ 
+/*
+############################
+====== logo client =========
+############################ 
+*/
+.logo-client{
+  margin-block-start: 50px;
+  margin-block-end: 50px;
+}
+.logo-client p{
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 300;
+  color: #667085;
+}
+.logo-client ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 25px 10px;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  gap: 10px;
+}
+/*
+#########################
+====== featches =========
+######################### 
+*/
+.featches{
+  margin-block-end: 50px;
+  position: relative;
+}
+.featches .content{
+  margin-block-end: 25px;
+}
+.featches .content p{
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27.5px;
+  margin-block-end: 20px;
+}
+.decore{
+  content: '';
+  position: absolute;
+  background: rgb(142, 173, 213, 24%);
+  width: 449px;
+  height: 449px;
+  border-radius: 50%;
+  right: -201px;
+  bottom: -456px;
+  filter: blur(100px);
+  pointer-events: none;
+}
+/*
+#############################
+====== testimonials =========
+############################# 
+*/
+.testimonials{
+  margin-block-end: 50px;
+}
+.testimonials small{
+  color: #272d38;
+  display: block;
+  margin-block-end: 10px;
+}
+.testimonials ul li .item{
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  padding: 20px;
+  color: #272d38;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.testimonials ul{
+  display: grid;
+  gap: 30px;
+}
+.testimonials ul li .item .image-user{
+  width: 130px;
+  height: 130px;
+  border: 1px solid #dedcdb;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-inline: auto;
+}
+.testimonials ul li .item h3{
+  margin-block-start: 10px;
+  margin-block-end: 25px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+/*
+########################
+====== contact =========
+######################## 
+*/
+.contact{
+  margin-block-end: 50px;
+}
+.contact .block{
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  padding: 40px 20px;
+  color: #272d38;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.contact .block .image{
+  display: none;
+}
+.contact .block p{
+  margin-block-end: 20px;
+}
+/*
+#######################
+====== footer =========
+#######################
+*/
+.footer{
+  background-color: #f6f6f6;
+  padding-block-start: 50px;
+  padding-block-end: 20px;
+  color: #272d38;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.footer .item-footer{
+  margin-block-end: 40px;
+}
+.footer .item-footer h2{
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 27.5px;
+}
+.footer .item-footer p{
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  width: 189px;
+  margin: auto;
+}
+
+.footer a{
+  color: #272d38;
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.footer .copyright{
+  margin-top: 60px;
+}
+.footer .copyright p{
+  font-size: 12px;
+}
+/**
+##################################################
+====== responsive for large 575px screen =========
+##################################################
+**/
+@media (min-width: 575px){
+  /*
+  --------------
+  global rules 
+  --------------
+ */
+  .container{
+    max-width: 450px;
+  }
+
+}
+/**
+##################################################
+====== responsive for large 768px screen =========
+##################################################
+**/
+@media (min-width: 768px){
+  /*
+  --------------
+  global rules 
+  --------------
+ */
+  .container{
+    max-width: 720px;
+  }
+
+}
+/**
+##################################################
+====== responsive for large 992px screen =========
+##################################################
+**/
+@media (min-width: 992px){
+  /*
+  --------------
+  global rules 
+  --------------
+ */
+ body{
+  text-align: start;
+ }
+  .container{
+    max-width: 950px;
+  }
+  .btn{
+    padding: 13px 35px;
+  }
+  .head{
+    font-size: 3rem;
+  }
+  /*
+  ----------
+  HEADER
+  ----------
+ */
+ .btn-navbar,
+ .container-logo a,
+ .overlay{
+  display: none;
+ }
+ .navbar{
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ .list-menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .menu-link{
+  margin-bottom: 0;
+  color: #272d38;
+  font-size: 18px;
+ }
+ .menu-link:hover{
+  padding-inline-start: unset;
+  color: #BA2E45;
+ }
+ .menu-item{
+  margin-inline-start: 40px;
+ }
+.logo h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+  /*
+  ----------
+  hero
+  ----------
+ */
+ .hero .container{
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(2,50%);
+  gap: 50px;
+ }
+ .hero .image{
+  text-align: right;
+}
+ .hero .content{
+  margin-block-end: 0;
+  padding-inline-end: 100px;
+ }
+ .hero .content h2{
+  font-size: 2.8rem;
+  margin-block-end: 20px;
+}
+.hero .content p{
+  margin-block-end: 20px;
+  font-size: 1rem;
+}
+.btn {
+  padding: 13px 35px;
+}
+  /*
+  ----------
+  logo client
+  ----------
+ */
+ .logo-client p{
+  text-align: center;
+  font-size: 1rem;
+}
+.logo-client ul {
+  width: 80%;
+  margin: auto;
+}
+  /*
+  ----------
+  featches
+  ----------
+ */
+ .featches .container{
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+ }
+ .featches .image{
+  order: -1;
+ }
+ .featches .content{
+  margin-block-end: 0;
+  font-size: 1.2rem;
+}
+.featches .content ion-icon{
+  rotate: 270deg;
+  font-size: 1.4rem;
+}
+.featches+.featches .image{
+  order: unset;
+}
+  /*
+  --------------
+  testimonials
+  --------------
+ */
+ .testimonials{
+  text-align: center;
+ }
+ .testimonials ul{
+  grid-template-columns: repeat(3,1fr);
+ }
+ /*
+----------
+contact 
+----------
+*/
+.contact .block .image{
+  display: block;
+  height: 350px;
+}
+.contact .block .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+.contact .block p{
+  margin-block-end: 20px;
+}
+.contact .block{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+}
+/*
+----------
+footer 
+----------
+*/
+.footer ul{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+.footer .item-footer p{
+  text-align: start;
+  margin: 0;
+}
+.footer .copyright{
+  text-align: center;
+}
+}
+/**
+##################################################
+====== responsive for large 1200px screen =========
+##################################################
+**/
+@media (min-width: 1200px){
+  .container{
+    max-width: 1150px;
+  }
+  .logo h1{
+    font-size: 1.5rem;
+  }
+  .hero{
+    margin-bottom: 180px;
+    padding-top: 170px;
+  }
+  .hero .image{
+    text-align: right;
+  }
+  .hero .content p{
+    padding-inline-end: 210px;
+  }
+  .featches .content p{
+    font-size: 18px;
+  }
+}
